@@ -1,0 +1,19 @@
+{
+    "description": "Reflection Extensions for static analysis of Flow classes with magic methods",
+    "type": "neos-build",
+    "name": "kleisli/flow-phpstan",
+    "require": {
+        "neos/flow": "*",
+        "phpstan/phpstan": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Kleisli\\Flow\\PhpStan\\": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "Kleisli.Flow.PhpStan"
+        }
+    }
+}
