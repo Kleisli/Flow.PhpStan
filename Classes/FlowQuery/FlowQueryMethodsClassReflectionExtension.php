@@ -11,8 +11,7 @@ class FlowQueryMethodsClassReflectionExtension implements MethodsClassReflection
     private array $operations = [
         "cacheLifetime", "children", "closest", "context", "filter", "find", "has", "nextAll", "next", "nextUntil",
         "parent","parents","parentsUntil","prevAll","prev","prevUntil","property","siblings","add","count","first",
-        "get", "is","last","remove","slice","unique","sort","neosUiDefaultNodes","neosUiFilteredChildren","search",
-        "filterByVisibilityForCurrentUser", "filterByFilterOfCurrentUser", "filterByTeaserAndValidLicense"];
+        "get", "is","last","remove","slice","unique","sort","neosUiDefaultNodes","neosUiFilteredChildren","search"];
 
     private array $finalOperations = ["cacheLifetime","property","count","get","is"];
 
