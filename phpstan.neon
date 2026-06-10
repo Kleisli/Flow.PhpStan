@@ -1,10 +1,6 @@
-services:
-     -
-        class: Kleisli\Flow\PhpStan\FlowRepository\FlowRepositoryMethodsClassReflectionExtension
-        tags:
-            - phpstan.broker.methodsClassReflectionExtension
-
-     -
-        class: Kleisli\Flow\PhpStan\FlowQuery\FlowQueryMethodsClassReflectionExtension
-        tags:
-            - phpstan.broker.methodsClassReflectionExtension
+parameters:
+    level: 10
+    paths:
+      - Classes
+    scanDirectories:
+      - ../../Packages/Libraries/phpstan

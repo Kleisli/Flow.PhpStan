@@ -31,7 +31,7 @@ class FlowRepositoryMethodsClassReflectionExtension implements MethodsClassRefle
         $propertyName = lcfirst($matches[1]);
 
         $entityClassName = $this->getEntityClassName($classReflection);
-        if(!$this->reflectionProvider->hasClass($entityClassName)){
+        if($entityClassName == null || !$this->reflectionProvider->hasClass($entityClassName)){
             return false;
         }
 
@@ -66,6 +66,6 @@ class FlowRepositoryMethodsClassReflectionExtension implements MethodsClassRefle
         } else {
             $entityClassName = constant("$repositoryClassName::ENTITY_CLASSNAME");
         }
-        return $entityClassName;
+        return is_string($entityClassName) ? $entityClassName : null;
     }
 }

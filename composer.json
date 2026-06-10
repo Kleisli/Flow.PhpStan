@@ -3,8 +3,8 @@
     "type": "neos-build",
     "name": "kleisli/flow-phpstan",
     "require": {
-        "neos/flow": "*",
-        "phpstan/phpstan": "*"
+        "neos/flow": "^8.0",
+        "phpstan/phpstan": "^2.2"
     },
     "autoload": {
         "psr-4": {

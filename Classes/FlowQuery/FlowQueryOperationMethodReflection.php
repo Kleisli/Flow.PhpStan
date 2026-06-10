@@ -7,7 +7,7 @@ use PHPStan\Reflection\TrivialParametersAcceptor;
 use PHPStan\Type\CallableType;
 use PHPStan\Type\ObjectType;
 
-class FlowQueryMethodReflection extends \Kleisli\Flow\PhpStan\DefaultMethodReflection
+class FlowQueryOperationMethodReflection extends \Kleisli\Flow\PhpStan\DefaultMethodReflection
 {
     private bool $operationIsFinal;
 

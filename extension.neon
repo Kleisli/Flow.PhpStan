@@ -1,0 +1,21 @@
+parametersSchema:
+	flowQueryOperations: listOf(string())
+	finalFlowQueryOperations: listOf(string())
+
+parameters:
+    flowQueryOperations: []
+    finalFlowQueryOperations: []
+
+services:
+     -
+        class: Kleisli\Flow\PhpStan\FlowRepository\FlowRepositoryMethodsClassReflectionExtension
+        tags:
+            - phpstan.broker.methodsClassReflectionExtension
+
+     -
+        class: Kleisli\Flow\PhpStan\FlowQuery\FlowQueryMethodsClassReflectionExtension
+        arguments:
+            flowQueryOperations: %flowQueryOperations%
+            finalFlowQueryOperations: %finalFlowQueryOperations%
+        tags:
+            - phpstan.broker.methodsClassReflectionExtension
