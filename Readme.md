@@ -6,7 +6,8 @@ Reflection Extensions for static analysis of Flow classes with magic methods
 composer require --dev kleisli/flow-phpstan
 ```
 
-In the `phpstan.neon` file add 
+Install the [PHPStan Extension Installer](https://github.com/phpstan/extension-installer#usage) or add
+the following to your `phpstan.neon` file 
 ```
 includes:
     - Build/Kleisli.Flow.PhpStan/phpstan.neon
@@ -23,8 +24,16 @@ When a magic method like `findOneBy<Property>` is called, the extension checks i
 is readable. and only marks the method as callable if it is.
 
 ### For FlowQuery
-Currently, it only checks for the default flow query operations, because I didn't manage to lod 
-all available operations via reflection.
+By default it only checks for the Neos flow query operations, but if you have custom operations, you can add them as
+parameters to your `phpstan.neon` file
+```
+parameters:
+    flowQueryOperations: []
+    finalFlowQueryOperations: []
+```
 
-## PHPStan documentation for this feature
+## PHPStan documentation
+### method class reflection extensions
 https://phpstan.org/developing-extensions/class-reflection-extensions#methods-class-reflection-extensions
+### custom parameters
+https://phpstan.org/config-reference#custom-parameters
