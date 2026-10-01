@@ -10,7 +10,7 @@ Install the [PHPStan Extension Installer](https://github.com/phpstan/extension-i
 the following to your `phpstan.neon` file 
 ```
 includes:
-    - Build/Kleisli.Flow.PhpStan/phpstan.neon
+    - Build/Kleisli.Flow.PhpStan/extension.neon
 ```
 
 ## Description
